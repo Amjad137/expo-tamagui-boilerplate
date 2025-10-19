@@ -1,4 +1,4 @@
-import '../tamagui-web.css'
+import '../../tamagui-web.css'
 
 import { useEffect } from 'react'
 import { useColorScheme } from 'react-native'
@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
-import { Provider } from 'components/Provider'
+import { Provider } from '@/components/Provider'
 import { useTheme } from 'tamagui'
 
 export {
@@ -73,7 +73,7 @@ function RootLayoutNav() {
             gestureEnabled: true,
             gestureDirection: 'horizontal',
             contentStyle: {
-              backgroundColor: theme.background.val,
+              backgroundColor: theme.background?.val,
             },
           }}
         />
