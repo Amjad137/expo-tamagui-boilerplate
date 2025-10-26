@@ -1,60 +1,58 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
-  "organizeImports": {
-    "enabled": false
-  },
+  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
       "correctness": {
-        "useExhaustiveDependencies": "off",
-        "noInnerDeclarations": "off",
-        "noUnnecessaryContinue": "off",
-        "noConstructorReturn": "off"
+        "useExhaustiveDependencies": "warn",
+        "noInnerDeclarations": "warn",
+        "noConstructorReturn": "warn"
       },
       "suspicious": {
-        "noImplicitAnyLet": "off",
-        "noConfusingVoidType": "off",
-        "noEmptyInterface": "off",
-        "noExplicitAny": "off",
-        "noArrayIndexKey": "off",
-        "noDoubleEquals": "off",
-        "noConsoleLog": "error",
-        "noAssignInExpressions": "off",
-        "noRedeclare": "off"
+        "noImplicitAnyLet": "warn",
+        "noConfusingVoidType": "warn",
+        "noEmptyInterface": "warn",
+        "noExplicitAny": "warn",
+        "noArrayIndexKey": "warn",
+        "noDoubleEquals": "warn",
+        "noAssignInExpressions": "warn",
+        "noRedeclare": "warn",
+        "noConsole": { "level": "error", "options": { "allow": ["log", "warn", "error"] } }
       },
       "style": {
-        "noParameterAssign": "off",
-        "noNonNullAssertion": "off",
-        "noArguments": "off",
-        "noUnusedTemplateLiteral": "off",
-        "useDefaultParameterLast": "off",
-        "useConst": "off",
-        "useEnumInitializers": "off",
-        "useTemplate": "off",
-        "useSelfClosingElements": "off"
+        "noParameterAssign": "warn",
+        "noNonNullAssertion": "warn",
+        "noUnusedTemplateLiteral": "warn",
+        "useDefaultParameterLast": "warn",
+        "useConst": "warn",
+        "useEnumInitializers": "warn",
+        "useTemplate": "warn",
+        "useSelfClosingElements": "warn"
       },
       "security": {
-        "noDangerouslySetInnerHtml": "off",
-        "noDangerouslySetInnerHtmlWithChildren": "off"
+        "noDangerouslySetInnerHtml": "warn",
+        "noDangerouslySetInnerHtmlWithChildren": "warn"
       },
       "performance": {
-        "noDelete": "off",
-        "noAccumulatingSpread": "off"
+        "noDelete": "warn",
+        "noAccumulatingSpread": "warn"
       },
       "complexity": {
-        "noForEach": "off",
-        "noBannedTypes": "off",
-        "useLiteralKeys": "off",
-        "useSimplifiedLogicExpression": "off",
-        "useOptionalChain": "off"
+        "noForEach": "warn",
+        "noBannedTypes": "warn",
+        "useLiteralKeys": "warn",
+        "useSimplifiedLogicExpression": "warn",
+        "useOptionalChain": "warn",
+        "noUselessContinue": "warn",
+        "noArguments": "warn"
       },
       "a11y": {
-        "noSvgWithoutTitle": "off",
-        "useMediaCaption": "off",
-        "noHeaderScope": "off",
-        "useAltText": "off",
-        "useButtonType": "off"
+        "noSvgWithoutTitle": "warn",
+        "useMediaCaption": "warn",
+        "noHeaderScope": "warn",
+        "useAltText": "warn",
+        "useButtonType": "warn"
       }
     }
   },
@@ -64,11 +62,11 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 90,
-    "ignore": ["**/*/generated-new.ts", "**/*/generated-v2.ts"]
+    "includes": ["**", "!**/*/generated-new.ts", "!**/*/generated-v2.ts"]
   },
   "javascript": {
     "formatter": {
-      "trailingComma": "es5",
+      "trailingCommas": "es5",
       "jsxQuoteStyle": "double",
       "semicolons": "asNeeded",
       "quoteStyle": "single"

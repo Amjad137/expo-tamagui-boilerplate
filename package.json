@@ -8,10 +8,15 @@
     "upgrade:tamagui": "yarn up '*tamagui*'@latest '@tamagui/*'@latest",
     "upgrade:tamagui:canary": "yarn up '*tamagui*'@canary '@tamagui/*'@canary",
     "check:tamagui": "tamagui check",
+    "env:copy:dev": "cp .env.development .env.local",
+    "env:copy:qa": "cp .env.qa .env.local",
+    "biome:check": "biome check",
+    "biome:format": "biome format --write",
     "start": "expo start -c",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
+    "ts:check": "tsc",
     "test": "jest --watchAll"
   },
   "jest": {
